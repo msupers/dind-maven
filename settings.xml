@@ -1,0 +1,54 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <pluginGroups>
+  </pluginGroups>
+
+  <proxies>
+  </proxies>
+  
+  <mirrors>
+    <mirror>
+      <id>local-nexus</id>
+      <mirrorOf>*</mirrorOf>
+      <name>database lab local maven repo</name>
+      <url>http://192.168.105.17:8081/repository/cmxi-java-group/</url>
+    </mirror>
+  </mirrors>
+  
+  <profiles>
+      <profile>
+        <id>dev</id>  
+        <repositories>
+          <repository>  
+            <id>central</id>
+            <name>local-maven-main-repository</name>  
+            <url>http://192.168.105.17:8081/repository/cmxi-java-group/</url>  
+            <releases>  
+              <enabled>true</enabled>
+            </releases>  
+            <snapshots>  
+              <enabled>true</enabled>  
+            </snapshots>  
+          </repository>
+        </repositories>
+        <pluginRepositories> 
+            <pluginRepository>  
+              <id>central</id>  
+              <name>local-maven-plugin-repository</name>  
+              <url>http://192.168.105.17:8081/repository/cmxi-java-group/</url>
+              <releases>  
+                <enabled>true</enabled>  
+              </releases>  
+              <snapshots>  
+                <enabled>false</enabled>  
+              </snapshots>      
+            </pluginRepository>  
+        </pluginRepositories>
+      </profile>
+  </profiles>
+  
+    <activeProfiles>
+      <activeProfile>dev</activeProfile>  
+    </activeProfiles>  
+</settings>
