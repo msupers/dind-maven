@@ -1,54 +1,56 @@
-<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" 
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
-  <pluginGroups>
-  </pluginGroups>
+<?xml version="1.0" encoding="UTF-8"?>
 
-  <proxies>
-  </proxies>
-  
-  <mirrors>
-    <mirror>
-      <id>local-nexus</id>
-      <mirrorOf>*</mirrorOf>
-      <name>database lab local maven repo</name>
-      <url>http://192.168.105.17:8081/repository/cmxi-java-group/</url>
-    </mirror>
-  </mirrors>
-  
-  <profiles>
-      <profile>
-        <id>dev</id>  
-        <repositories>
-          <repository>  
-            <id>central</id>
-            <name>local-maven-main-repository</name>  
-            <url>http://192.168.105.17:8081/repository/cmxi-java-group/</url>  
-            <releases>  
-              <enabled>true</enabled>
-            </releases>  
-            <snapshots>  
-              <enabled>true</enabled>  
-            </snapshots>  
-          </repository>
-        </repositories>
-        <pluginRepositories> 
-            <pluginRepository>  
-              <id>central</id>  
-              <name>local-maven-plugin-repository</name>  
-              <url>http://192.168.105.17:8081/repository/cmxi-java-group/</url>
-              <releases>  
-                <enabled>true</enabled>  
-              </releases>  
-              <snapshots>  
-                <enabled>false</enabled>  
-              </snapshots>      
-            </pluginRepository>  
-        </pluginRepositories>
-      </profile>
-  </profiles>
-  
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+ 
+    <servers>
+		<server>   
+			<id>mec-server</id>
+            <username>zhanglei</username>
+            <password>Oa268330</password>
+        </server>
+	</servers>
+	<profiles>
+		<profile>
+            <id>artifactory</id>
+            <repositories>
+                <repository>
+                    <snapshots>
+                        <enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+                    </snapshots>
+                    <id>buukle-server</id>
+                    <name>buukle-group</name>
+                    <url>http://tools.cmxri.cn/nexus/repository/mec-group/</url>
+                </repository>
+            </repositories>
+        </profile>
+	</profiles>
+    <mirrors>
+        <!-- 阿里云仓库 -->
+        <mirror>
+            <id>alimaven</id>
+            <mirrorOf>central</mirrorOf>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+        </mirror>
+        <!-- 中央仓库1 -->
+        <mirror>
+            <id>repo1</id>
+            <mirrorOf>central</mirrorOf>
+            <name>Human Readable Name for this Mirror.</name>
+            <url>http://repo1.maven.org/maven2/</url>
+        </mirror>
+        <!-- 中央仓库2 -->
+        <mirror>
+            <id>repo2</id>
+            <mirrorOf>central</mirrorOf>
+            <name>Human Readable Name for this Mirror.</name>
+            <url>http://repo2.maven.org/maven2/</url>
+        </mirror>
+    </mirrors>
     <activeProfiles>
-      <activeProfile>dev</activeProfile>  
-    </activeProfiles>  
+        <activeProfile>artifactory</activeProfile>
+    </activeProfiles>
 </settings>
