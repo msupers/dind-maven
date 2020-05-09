@@ -11,8 +11,8 @@
     <mirror>
       <id>local-nexus</id>
       <mirrorOf>*</mirrorOf>
-      <name>database lab local maven repo</name>
-      <url>http://192.168.105.17:8081/repository/cmxi-java-group/</url>
+      <name>xdf tess local maven repo</name>
+      <url>http://172.24.30.185:8089/repository/xdf-maven-group/</url>
     </mirror>
   </mirrors>
   
@@ -23,7 +23,7 @@
           <repository>  
             <id>central</id>
             <name>local-maven-main-repository</name>  
-            <url>http://192.168.105.17:8081/repository/cmxi-java-group/</url>  
+            <url>http://172.24.30.185:8089/repository/xdf-maven-group/</url>  
             <releases>  
               <enabled>true</enabled>
             </releases>  
@@ -36,7 +36,7 @@
             <pluginRepository>  
               <id>central</id>  
               <name>local-maven-plugin-repository</name>  
-              <url>http://192.168.105.17:8081/repository/cmxi-java-group/</url>
+              <url>http://172.24.30.185:8089/repository/xdf-maven-group/</url>
               <releases>  
                 <enabled>true</enabled>  
               </releases>  

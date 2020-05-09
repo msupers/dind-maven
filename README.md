@@ -1,3 +1,3 @@
 ## images-name
 
-- registry.cn-beijing.aliyuncs.com/hobbits/dind-maven:v3.6.3
+- registry.cn-beijing.aliyuncs.com/hobbits/dind-maven:xdfv3.6.3
