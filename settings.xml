@@ -12,54 +12,7 @@
       <id>local-nexus</id>
       <mirrorOf>*</mirrorOf>
       <name>xdf tess local maven repo</name>
-      <url>http://172.24.30.185:8089/repository/xdf-maven-group/</url>
+      <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
     </mirror>
   </mirrors>
-  <servers>
-         <server>
-                   <id>releases</id>
-                   <username>admin</username>
-                   <password>xdf_cis_2020</password>
-         </server>
-         <server>
-                   <id>snapshots</id>
-                   <username>admin</username>
-                   <password>xdf_cis_2020</password>
-         </server>
-</servers>
-  <profiles>
-      <profile>
-        <id>dev</id>  
-        <repositories>
-          <repository>  
-            <id>central</id>
-            <name>local-maven-main-repository</name>  
-            <url>http://172.24.30.185:8089/repository/xdf-maven-group/</url>  
-            <releases>  
-              <enabled>true</enabled>
-            </releases>  
-            <snapshots>  
-              <enabled>true</enabled>  
-            </snapshots>  
-          </repository>
-        </repositories>
-        <pluginRepositories> 
-            <pluginRepository>  
-              <id>central</id>  
-              <name>local-maven-plugin-repository</name>  
-              <url>http://172.24.30.185:8089/repository/xdf-maven-group/</url>
-              <releases>  
-                <enabled>true</enabled>  
-              </releases>  
-              <snapshots>  
-                <enabled>false</enabled>  
-              </snapshots>      
-            </pluginRepository>  
-        </pluginRepositories>
-      </profile>
-  </profiles>
-  
-    <activeProfiles>
-      <activeProfile>dev</activeProfile>  
-    </activeProfiles>  
 </settings>
