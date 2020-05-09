@@ -15,7 +15,18 @@
       <url>http://172.24.30.185:8089/repository/xdf-maven-group/</url>
     </mirror>
   </mirrors>
-  
+  <servers>
+         <server>
+                   <id>releases</id>
+                   <username>admin</username>
+                   <password>xdf_cis_2020</password>
+         </server>
+         <server>
+                   <id>snapshots</id>
+                   <username>admin</username>
+                   <password>xdf_cis_2020</password>
+         </server>
+</servers>
   <profiles>
       <profile>
         <id>dev</id>  
