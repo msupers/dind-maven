@@ -12,7 +12,7 @@
       <id>local-nexus</id>
       <mirrorOf>*</mirrorOf>
       <name>xdf tess local maven repo</name>
-      <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+      <url>http://172.24.30.185:8089/repository/maven-ali-proxy/</url>
     </mirror>
   </mirrors>
 </settings>
